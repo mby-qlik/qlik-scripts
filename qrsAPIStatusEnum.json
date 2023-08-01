@@ -1,0 +1,716 @@
+{
+    "AbortReasonEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ExecutionSession.AbortReason"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: Manual",
+            "2: Timeout",
+            "3: DeletedTask"
+        ]
+    },
+    "AccessTypeAssignmentService": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "LicenseAnalyzerAccessType.AssignedByService",
+            "LicenseProfessionalAccessType.AssignedByService"
+        ],
+        "values": [
+            "0: Repository",
+            "1: Licenses"
+        ]
+    },
+    "AnonymousAccessModeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "VirtualProxyConfig.AnonymousAccessMode"
+        ],
+        "values": [
+            "0: NoAnonymousUser",
+            "1: AllowAnonymous",
+            "2: AlwaysAnonymous"
+        ]
+    },
+    "AppAvailabilityStatus": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "App.AvailabilityStatus"
+        ],
+        "values": [
+            "0: NotApplicable",
+            "1: Available",
+            "2: NoActiveRoute",
+            "3: NoConfiguredRoute",
+            "4: NotSynced",
+            "5: NotMigrated"
+        ]
+    },
+    "ArchitectureEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "DataConnection.Architecture"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: x86",
+            "2: x64"
+        ]
+    },
+    "AuditActivityLogVerbosityEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "EngineServiceSettings.AuditActivityLogVerbosity",
+            "EngineServiceSettings.AuditSecurityLogVerbosity",
+            "ProxyServiceSettingsLogVerbosity.LogVerbosityAuditActivity",
+            "ProxyServiceSettingsLogVerbosity.LogVerbosityAuditSecurity",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityAuditActivity",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityAuditSecurity",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityAuditActivity",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityAuditSecurity"
+        ],
+        "values": [
+            "0: Off",
+            "1: Fatal",
+            "2: Error",
+            "3: Warning",
+            "4: Basic",
+            "5: Extended"
+        ]
+    },
+    "AuthenticationMethodEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "VirtualProxyConfig.AuthenticationMethod"
+        ],
+        "values": [
+            "0: Ticket",
+            "1: HeaderStaticUserDirectory",
+            "2: HeaderDynamicUserDirectory",
+            "3: SAML",
+            "4: JWT",
+            "5: OIDC"
+        ]
+    },
+    "CachePolicyEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ContentCacheControl.CachePolicy",
+            "StaticContentReference.CachePolicy",
+            "IStaticContentReferenceBase.CachePolicy",
+            "TempContent.CachePolicy"
+        ],
+        "values": [
+            "0: Normal",
+            "1: MustRevalidate",
+            "2: PrivateNormal",
+            "3: PrivateMustRevalidate",
+            "4: NoStore"
+        ]
+    },
+    "ChangeType": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "MqChangeNotificationRegistration.FilterChangeType"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: Add",
+            "2: Update",
+            "3: Delete"
+        ]
+    },
+    "ColumnTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "TableDefinitionColumn.ColumnType",
+            "ITableDefinitionColumnBase.ColumnType",
+            "TableDefinitionListColumn.ColumnType"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: Property",
+            "2: Function",
+            "3: List",
+            "4: Privileges"
+        ]
+    },
+    "ContentLibraryType": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "FileExtensionWhiteList.LibraryType"
+        ],
+        "values": [
+            "0: ContentLibrary",
+            "1: AppContent",
+            "2: SharedContent",
+            "3: Extension"
+        ]
+    },
+    "CreationTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "StaticContentReference.CreationType",
+            "UserDirectory.CreationType"
+        ],
+        "values": [
+            "0: Installed",
+            "1: Added"
+        ]
+    },
+    "CustomBannerMessageType": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "CustomBannerMessage.MessageType"
+        ],
+        "values": [
+            "0: Standard",
+            "1: Info",
+            "2: Warning",
+            "3: Error"
+        ]
+    },
+    "DaylightSavingTimeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "SchemaEvent.DaylightSavingTime"
+        ],
+        "values": [
+            "0: ObserveDaylightSavingTime",
+            "1: PermanentStandardTime",
+            "2: PermanentDaylightSavingTime"
+        ]
+    },
+    "DefinitionEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ServerNodeRole.Definition"
+        ],
+        "values": [
+            "0: SchedulerMaster",
+            "1: LicenceMaintenance",
+            "2: UserSync",
+            "3: NodeRegistration",
+            "4: AppManagement",
+            "5: CleanDatabase"
+        ]
+    },
+    "DetailsTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ExecutionResultDetail.DetailsType"
+        ],
+        "values": [
+            "0: Error",
+            "1: Warning",
+            "2: Information"
+        ]
+    },
+    "EventTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "CompositeEvent.EventType",
+            "IEvent.EventType",
+            "SchemaEvent.EventType"
+        ],
+        "values": [
+            "0: Schema",
+            "1: Composite"
+        ]
+    },
+    "ExternalProductTypes": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ExternalProductSignOn.ProductType"
+        ],
+        "values": [
+            "0: QlikAlerting"
+        ]
+    },
+    "FileTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "BinaryDelete.BinaryType",
+            "BinaryDownload.BinaryType",
+            "FileReference.FileType"
+        ],
+        "values": [
+            "0: Unknown",
+            "1: Log",
+            "2: StaticContent",
+            "3: AppObject",
+            "4: AppDataSegment",
+            "5: App",
+            "6: AppInternal"
+        ]
+    },
+    "HeaderAuthenticationModeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "VirtualProxyConfig.HeaderAuthenticationMode"
+        ],
+        "values": [
+            "0: NotAllowed",
+            "1: StaticUserDirectory",
+            "2: DynamicUserDirectory",
+            "3: Undefined"
+        ]
+    },
+    "IncrementOptionEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "SchemaEvent.IncrementOption"
+        ],
+        "values": [
+            "0: once",
+            "1: hourly",
+            "2: daily",
+            "3: weekly",
+            "4: monthly",
+            "5: custom"
+        ]
+    },
+    "LicenseAddendumLevel": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "TermsAcceptance.AddendumLevel"
+        ],
+        "values": [
+            "0: None",
+            "5001: SenseDataCollection"
+        ]
+    },
+    "LicenseProductLevel": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "TermsAcceptance.ProductLevel"
+        ],
+        "values": [
+            "50: Sense"
+        ]
+    },
+    "LockTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "Lock.LockType"
+        ],
+        "values": [
+            "0: Failover"
+        ]
+    },
+    "LogLevelEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagServiceSettings.LogLevel"
+        ],
+        "values": [
+            "0: Off",
+            "1: Fatal",
+            "2: Error",
+            "3: Warning",
+            "4: Info",
+            "5: Debug",
+            "6: Trace"
+        ]
+    },
+    "LogOnEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "DataConnection.LogOn"
+        ],
+        "values": [
+            "0: LOG_ON_SERVICE_USER",
+            "1: LOG_ON_CURRENT_USER"
+        ]
+    },
+    "LogVerbosityLicenseEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityLicense"
+        ],
+        "values": [
+            "0: Info",
+            "1: Debug"
+        ]
+    },
+    "NodePurposeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ServerNodeConfiguration.NodePurpose"
+        ],
+        "values": [
+            "0: Production",
+            "1: Development",
+            "2: ProductionAndDevelopment"
+        ]
+    },
+    "OdagEngineGroupStatusEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagEngineGroup.OdagEngineGroupStatus",
+            "OdagModelGroup.OdagModelGroupStatus"
+        ],
+        "values": [
+            "0: active",
+            "1: disabled",
+            "2: decommissioned"
+        ]
+    },
+    "OdagLinkStatusEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagLink.OdagLinkStatus"
+        ],
+        "values": [
+            "0: active",
+            "1: disabled",
+            "2: decommissioned",
+            "3: incomplete"
+        ]
+    },
+    "OdagRequestKindEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagRequest.OdagRequestKind"
+        ],
+        "values": [
+            "0: single",
+            "1: multiple",
+            "2: singlesub"
+        ]
+    },
+    "OdagRequestLoadStatusEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagRequest.OdagRequestLoadStatus"
+        ],
+        "values": [
+            "0: pending",
+            "1: success",
+            "2: warnings",
+            "3: failed"
+        ]
+    },
+    "OdagRequestStateEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "OdagRequest.OdagRequestState"
+        ],
+        "values": [
+            "0: validating",
+            "1: queued",
+            "2: invalid",
+            "3: hold",
+            "4: loading",
+            "5: canceled",
+            "6: failed",
+            "7: succeeded",
+            "8: canceling",
+            "9: canceledAck",
+            "10: failedAck"
+        ]
+    },
+    "PersistenceModeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ServiceClusterSettings.PersistenceMode"
+        ],
+        "values": [
+            "0: LegacyPersistence",
+            "1: SingleQvf",
+            "2: SplitQvf"
+        ]
+    },
+    "ProductEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "License.Product"
+        ],
+        "values": [
+            "0: Platform",
+            "1: Enterprise",
+            "2: Standard"
+        ]
+    },
+    "RuleContextEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "SystemRule.RuleContext"
+        ],
+        "values": [
+            "0: BothQlikSenseAndQMC",
+            "1: QlikSenseOnly",
+            "2: QMCOnly"
+        ]
+    },
+    "RuleStateEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "CompositeEventRule.RuleState",
+            "CompositeEventRuleOperational.CurrentState"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: TaskSuccessful",
+            "2: TaskFail"
+        ]
+    },
+    "SameSiteAttributeHttpsEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "VirtualProxyConfig.SameSiteAttributeHttps",
+            "VirtualProxyConfig.SameSiteAttributeHttp"
+        ],
+        "values": [
+            "0: NoAttribute",
+            "1: None",
+            "2: Lax",
+            "3: Strict"
+        ]
+    },
+    "SamlAttributeSigningAlgorithmEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "VirtualProxyConfig.SamlAttributeSigningAlgorithm"
+        ],
+        "values": [
+            "0: SHA1",
+            "1: SHA256"
+        ]
+    },
+    "SchedulerServiceTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "SchedulerServiceSettings.SchedulerServiceType"
+        ],
+        "values": [
+            "0: Master",
+            "1: Slave",
+            "2: MasterAndSlave"
+        ]
+    },
+    "SerializationContextFlags": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "AbstractSchemaPathObject.SerializationContext",
+            "ISerializableObject.SerializationContext",
+            "ProxyServiceSettings.SerializationContext",
+            "ServiceClusterSettings.SerializationContext",
+            "UserDirectory.SerializationContext"
+        ],
+        "values": [
+            "0: None",
+            "1: ServiceAccount",
+            "2: CreateOnCentralNode",
+            "4: TransactionItem"
+        ]
+    },
+    "ServiceLogVerbosityEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "EngineServiceSettings.ServiceLogVerbosity",
+            "EngineServiceSettings.SystemLogVerbosity",
+            "EngineServiceSettings.PerformanceLogVerbosity",
+            "EngineServiceSettings.HttpTrafficLogVerbosity",
+            "EngineServiceSettings.ExternalServicesLogVerbosity",
+            "EngineServiceSettings.QixPerformanceLogVerbosity",
+            "EngineServiceSettings.AuditLogVerbosity",
+            "EngineServiceSettings.SessionLogVerbosity",
+            "EngineServiceSettings.TrafficLogVerbosity",
+            "EngineServiceSettings.SseLogVerbosity",
+            "PrintingServiceSettingsLogVerbosity.LogVerbosityAuditActivity",
+            "PrintingServiceSettingsLogVerbosity.LogVerbosityService",
+            "ProxyServiceSettingsLogVerbosity.LogVerbosityService",
+            "ProxyServiceSettingsLogVerbosity.LogVerbosityAudit",
+            "ProxyServiceSettingsLogVerbosity.LogVerbosityPerformance",
+            "ProxyServiceSettingsLogVerbosity.LogVerbositySecurity",
+            "ProxyServiceSettingsLogVerbosity.LogVerbositySystem",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityService",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityApplication",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityAudit",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityManagementConsole",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityPerformance",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbositySecurity",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbositySynchronization",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbositySystem",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityUserManagement",
+            "RepositoryServiceSettingsLogVerbosity.LogVerbosityRuleAudit",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityService",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityApplication",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityAudit",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityPerformance",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbositySecurity",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbositySystem",
+            "SchedulerServiceSettingsLogVerbosity.LogVerbosityTaskExecution"
+        ],
+        "values": [
+            "0: Off",
+            "1: Fatal",
+            "2: Error",
+            "3: Warning",
+            "4: Info",
+            "5: Debug"
+        ]
+    },
+    "ServiceStateEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ServiceStatus.ServiceState"
+        ],
+        "values": [
+            "0: Initializing",
+            "1: CertificatesNotInstalled",
+            "2: Running",
+            "3: NoCommunication",
+            "4: Disabled",
+            "5: Unknown"
+        ]
+    },
+    "ServiceTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ServiceStatus.ServiceType"
+        ],
+        "values": [
+            "0: Repository",
+            "1: Proxy",
+            "2: Scheduler",
+            "3: Engine",
+            "4: AppMigration",
+            "5: Printing"
+        ]
+    },
+    "StateEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "BinaryDownload.State"
+        ],
+        "values": [
+            "0: Queued",
+            "1: Ongoing",
+            "2: Successful",
+            "3: Failed",
+            "4: Cancelled"
+        ]
+    },
+    "StaticContentDataTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "StaticContentReference.StaticContentDataType",
+            "IStaticContentReferenceBase.StaticContentDataType",
+            "TempContent.StaticContentDataType"
+        ],
+        "values": [
+            "0: File",
+            "1: Directory",
+            "2: Zip",
+            "3: ClientRoute"
+        ]
+    },
+    "StaticContentSecurityTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "StaticContentReference.StaticContentSecurityType"
+        ],
+        "values": [
+            "0: Open",
+            "1: Normal",
+            "2: Closed"
+        ]
+    },
+    "StatusTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "AppStatus.StatusType"
+        ],
+        "values": [
+            "0: Migration",
+            "1: Import"
+        ]
+    },
+    "SyncDirectionEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "FileReference.SyncDirection"
+        ],
+        "values": [
+            "0: CentralToRim",
+            "1: RimToCentral",
+            "2: BiDirectional"
+        ]
+    },
+    "SyncStateEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "SyncSession.SyncState"
+        ],
+        "values": [
+            "0: Undefined",
+            "1: Ongoing",
+            "2: Succeeded",
+            "3: Failed"
+        ]
+    },
+    "SyncStatusEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "UserDirectory.SyncStatus"
+        ],
+        "values": [
+            "0: Idle",
+            "1: ExternalFetch",
+            "2: DBStore"
+        ]
+    },
+    "TaskExecutionStatus": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ExecutionResult.Status"
+        ],
+        "values": [
+            "0: NeverStarted",
+            "1: Triggered",
+            "2: Started",
+            "3: Queued",
+            "4: AbortInitiated",
+            "5: Aborting",
+            "6: Aborted",
+            "7: FinishedSuccess",
+            "8: FinishedFail",
+            "9: Skipped",
+            "10: Retry",
+            "11: Error",
+            "12: Reset",
+            "13: DistributionQueue",
+            "14: DistributionRunning"
+        ]
+    },
+    "TaskTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "ExternalProgramTask.TaskType",
+            "ITask.TaskType",
+            "ReloadTask.TaskType",
+            "UserSyncTask.TaskType"
+        ],
+        "values": [
+            "0: Reload",
+            "1: ExternalProgram",
+            "2: UserSync",
+            "3: Distribute"
+        ]
+    },
+    "UserDirectorySettingTypeEnum": {
+        "schemaPath": "EnumDescription",
+        "usages": [
+            "UserDirectorySettings.UserDirectorySettingType"
+        ],
+        "values": [
+            "0: String",
+            "1: Int",
+            "2: Bool",
+            "3: LargeString"
+        ]
+    }
+}
