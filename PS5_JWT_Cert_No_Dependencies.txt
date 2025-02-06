@@ -1,0 +1,60 @@
+Import-Module PKI
+Import-Module Microsoft.PowerShell.Security
+
+$certName = "JWTSigningCert4"
+$subjectName = "CN=$($certName)"
+
+$notBefore = Get-Date
+$notAfter = $notBefore.AddYears(10)
+$keyLength = 2048
+
+# Watch out! -KeyExportPolicy must be Exportable
+# Ideally, -Provider 'Microsoft Enhanced RSA and AES Cryptographic Provider'
+$cert = New-SelfSignedCertificate -Subject $subjectName -NotBefore $notBefore -NotAfter $notAfter -KeyAlgorithm RSA -KeyLength $keyLength -CertStoreLocation Cert:\CurrentUser\My -KeyUsage DigitalSignature -KeyExportPolicy Exportable -KeyProtection None -Provider 'Microsoft Enhanced RSA and AES Cryptographic Provider'
+
+$pfxPassword = ConvertTo-SecureString -String '1234' -Force -AsPlainText
+
+Export-Certificate -Cert $cert -FilePath $certName.cer -Type CERT
+
+Export-PfxCertificate -Cert $cert -FilePath $certName.pfx -Password $pfxPassword
+
+# This is needed for the virtual proxy certificate
+CertUtil.exe -encode ".\$($certName).cer" ".\$($certName).pem"
+
+# JWT creation function
+function New-JWT {
+    param (
+        [hashtable]$Payload,
+        [System.Security.Cryptography.X509Certificates.X509Certificate2]$Cert
+    )
+
+    $header = @{
+        alg = "RS256"
+        typ = "JWT"
+    }
+
+    $headerJson = $header | ConvertTo-Json -Compress
+    $payloadJson = $Payload | ConvertTo-Json -Compress
+
+    $headerBase64 = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($headerJson)).Replace('+', '-').Replace('/', '_').TrimEnd('=')
+    $payloadBase64 = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($payloadJson)).Replace('+', '-').Replace('/', '_').TrimEnd('=')
+
+    $toSign = $headerBase64 + "." + $payloadBase64
+
+    $rsa = $Cert.PrivateKey
+    $signature = $rsa.SignData([System.Text.Encoding]::UTF8.GetBytes($toSign), [System.Security.Cryptography.HashAlgorithmName]::SHA256, [System.Security.Cryptography.RSASignaturePadding]::Pkcs1)
+    $signatureBase64 = [Convert]::ToBase64String($signature).Replace('+', '-').Replace('/', '_').TrimEnd('=')
+
+    return $headerBase64 + "." + $payloadBase64 + "." + $signatureBase64 
+}
+
+# Create a JWT
+$payload = @{
+    userId = "exerciser_4"
+    userDirectory = "ST_USERS"
+    aud = "qlik.api"
+}
+
+$token = New-JWT -Payload $payload -Cert $cert
+
+Write-Host "JWT: $token"
